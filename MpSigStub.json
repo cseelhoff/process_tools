@@ -1,0 +1,23 @@
+{
+    "bool": {
+        "must": [
+            {
+                "prefix": {
+                    "process.parent.name": "MpSigStub.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "mprecovery.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

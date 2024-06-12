@@ -1,0 +1,23 @@
+{
+    "bool": {
+        "must": [
+            {
+                "prefix": {
+                    "process.parent.name": "MicrosoftEdgeUpdateSetup_"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "msedgeupdate.dll"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

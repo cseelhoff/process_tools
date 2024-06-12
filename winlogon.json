@@ -1,0 +1,28 @@
+{
+  "bool": {
+      "must": [
+          {
+              "match_phrase": {
+                  "process.parent.name": "winlogon.exe"
+              }
+          },
+          {
+              "terms": {
+                  "process.pe.original_file_name": [
+                      "ATBroker.exe",
+                      "logonui.exe",
+                      "dwm.exe",
+                      "fontdrvhost.exe",
+                      "WLRMNDR.EXE",
+                      "USERINIT.EXE"
+                  ]
+              }
+          },
+          {
+              "match_phrase": {
+                  "process.code_signature.trusted": true
+              }
+          }
+      ]
+  }
+}

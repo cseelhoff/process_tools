@@ -1,0 +1,27 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "MicrosoftEdgeUpdate.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "msedgeupdate.dll",
+                        "MicrosoftEdgeUpdateComRegisterShell64.exe",
+                        "MicrosoftEdgeUpdateSetup.exe",
+                        "WerMgr",
+                        "mini_installer.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

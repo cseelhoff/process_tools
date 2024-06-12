@@ -1,0 +1,23 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "msiexec.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "msiexec.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

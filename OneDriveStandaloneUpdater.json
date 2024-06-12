@@ -1,0 +1,23 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "OneDriveStandaloneUpdater.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "Microsoft.SharePoint.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

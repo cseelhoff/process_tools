@@ -1,0 +1,46 @@
+{
+    "bool": {
+      "must": [
+        {
+          "match_phrase": {
+            "process.parent.name": "services.exe"
+          }
+        },
+        {
+          "terms": {
+            "process.pe.original_file_name": [
+                "elastic-agent.exe",
+                "elevation_service.exe",
+                "GoogleUpdate.exe",
+                "MpDefenderCoreService.exe",
+                "MSDTC.EXE",
+                "msedgeupdate.dll",
+                "msiexec.exe",
+                "MsMpEng.exe",
+                "NisSrv.exe",
+                "SearchIndexer.exe",
+                "SecurityHealthService.exe",
+                "SgrmBroker.exe",
+                "spoolsv.exe",
+                "sppsvc.exe",
+                "svchost.exe",
+                "TrustedInstaller.exe",
+                "uhssvc",
+                "upfc.exe",
+                "VGAuthService.exe",
+                "vm3dservice.exe",
+                "vmtoolsd.exe",
+                "VSSVC.EXE",
+                "WmiApSrv.exe",
+                "WUDFHost.exe"
+            ]
+          }
+        },
+        {
+          "match_phrase": {
+            "process.code_signature.trusted": true
+          }
+        }
+      ]
+    }
+  }

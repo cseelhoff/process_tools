@@ -1,0 +1,26 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "OneDriveSetup.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "OneDrive.exe",
+                        "OneDriveSetup.exe",
+                        "FileSyncConfig.exe",
+                        "Microsoft.SharePoint.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

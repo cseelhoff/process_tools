@@ -1,0 +1,23 @@
+{
+    "bool": {
+        "must": [
+            {
+                "prefix": {
+                    "process.parent.name": "smss.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "WINLOGON.EXE"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

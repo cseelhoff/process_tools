@@ -1,0 +1,27 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "MsMpEng.exe"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "wevtutil.exe",
+                        "MpCmdRun.exe",
+                        "taskkill.exe",
+                        "mofcomp.exe",
+                        "DismHost.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

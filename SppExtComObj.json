@@ -1,0 +1,23 @@
+{
+  "bool": {
+      "must": [
+          {
+              "match_phrase": {
+                  "process.parent.name": "SppExtComObj.Exe"
+              }
+          },
+          {
+              "terms": {
+                  "process.pe.original_file_name": [
+                      "slui.exe"
+                  ]
+              }
+          },
+          {
+              "match_phrase": {
+                  "process.code_signature.trusted": true
+              }
+          }
+      ]
+  }
+}

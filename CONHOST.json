@@ -1,0 +1,16 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.pe.original_file_name": "CONHOST.EXE"
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "bool": {
+      "must": [
+          {
+              "match_phrase": {
+                  "process.parent.name": "Sysmon64.exe"
+              }
+          },
+          {
+              "terms": {
+                  "process.pe.original_file_name": [
+                      "wevtutil.exe"
+                  ]
+              }
+          },
+          {
+              "match_phrase": {
+                  "process.code_signature.trusted": true
+              }
+          }
+      ]
+  }
+}

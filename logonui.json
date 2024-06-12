@@ -1,0 +1,21 @@
+{
+  "bool": {
+    "must": [
+      {
+        "match_phrase": {
+          "process.parent.command_line": "winlogon.exe"
+        }
+      },
+      {
+        "prefix": {
+          "process.command_line": "\"LogonUI.exe\" /flags:0x"
+        }
+      },
+      {
+        "match_phrase": {
+          "process.hash.md5": "b3cc2464bece9a99d8c755a7ccbfef52"
+        }
+      }
+    ]
+  }
+}

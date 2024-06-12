@@ -1,0 +1,40 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "wuaucltcore.exe"
+                }
+            },
+            {
+                "bool": {
+                    "should": [
+                        {
+                            "prefix": {
+                                "process.pe.original_file_name": "AM_Delta_Patch_"
+                            }
+                        },
+                        {
+                            "terms": {
+                                "process.pe.original_file_name": [
+                                    "MpSigStub.exe",
+                                    "UpdatePlatform.exe",
+                                    "DismHost.exe",
+                                    "mrtstub.exe",
+                                    "extractr.exe",
+                                    "unifiedinstaller"
+                                ]
+                            }
+                        }
+                    ],
+                    "minimum_should_match": 1
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

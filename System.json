@@ -1,0 +1,24 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "System"
+                }
+            },
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "smss.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+  }
+  

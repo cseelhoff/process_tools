@@ -1,0 +1,23 @@
+{
+  "bool": {
+      "must": [
+          {
+              "match_phrase": {
+                  "process.parent.name": "TiWorker.exe"
+              }
+          },
+          {
+              "terms": {
+                  "process.pe.original_file_name": [
+                      "makecab.exe"
+                  ]
+              }
+          },
+          {
+              "match_phrase": {
+                  "process.code_signature.trusted": true
+              }
+          }
+      ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "bool": {
+      "must": [
+          {
+              "match_phrase": {
+                  "process.parent.name": "rundll32.exe"
+              }
+          },
+          {
+              "terms": {
+                  "process.pe.original_file_name": [
+                      "WinSAT.exe",
+                      "sdbinst.exe"
+                  ]
+              }
+          },
+          {
+              "match_phrase": {
+                  "process.code_signature.trusted": true
+              }
+          }
+      ]
+  }
+}

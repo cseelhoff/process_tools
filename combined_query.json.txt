@@ -1,0 +1,1442 @@
+{
+  "bool": {
+    "should": [
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "appidcertstorecheck.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "cleanmgr.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "DismHost.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "CompatTelRunner.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE",
+                  "CompatTelRunner.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.pe.original_file_name": "CONHOST.EXE"
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "default-browser-agent.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "firefox.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "Defrag.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "directxdatabaseupdater.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "DismHost.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "dmclient.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "msedge.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "wermgr.exe",
+                  "msedge.exe",
+                  "setup.exe",
+                  "identity_helper.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "elastic-agent.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "elastic-agent.exe",
+                  "osquerybeat.exe",
+                  "filebeat.exe",
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "elevation_service.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "setup.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "endpoint-security.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "explorer.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "SecurityHealthSystray.exe",
+                  "vmtoolsd.exe",
+                  "OneDrive.exe",
+                  "Taskmgr.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "filebeat.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "firefox.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "firefox.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.command_line": "winlogon.exe"
+              }
+            },
+            {
+              "prefix": {
+                "process.command_line": "\"LogonUI.exe\" /flags:0x"
+              }
+            },
+            {
+              "match_phrase": {
+                "process.hash.md5": "b3cc2464bece9a99d8c755a7ccbfef52"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "makecab.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "MicrosoftEdge_X64_125.0.2535.85_125.0.2535.79.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "setup.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "MicrosoftEdgeUpdate.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "msedgeupdate.dll",
+                  "MicrosoftEdgeUpdateComRegisterShell64.exe",
+                  "MicrosoftEdgeUpdateSetup.exe",
+                  "WerMgr",
+                  "mini_installer.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "prefix": {
+                "process.parent.name": "MicrosoftEdgeUpdateSetup_"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "msedgeupdate.dll"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "MoUsoCoreWorker.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "UsoClient",
+                  "MoNotificationUx.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "MpCmdRun.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "prefix": {
+                "process.parent.name": "MpSigStub.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "mprecovery.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "msedge.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "msedge.exe",
+                  "identity_helper.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "msedgewebview2.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "msedgewebview2.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "msiexec.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "msiexec.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "MsMpEng.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "wevtutil.exe",
+                  "MpCmdRun.exe",
+                  "taskkill.exe",
+                  "mofcomp.exe",
+                  "DismHost.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "ngen.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "mscorsvw.exe",
+                  "ngen.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "ngentask.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "ngen.exe",
+                  "NGenTask.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "OneDrive.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "OneDriveSetup.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "OneDriveSetup.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "OneDrive.exe",
+                  "OneDriveSetup.exe",
+                  "FileSyncConfig.exe",
+                  "Microsoft.SharePoint.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "OneDriveStandaloneUpdater.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "Microsoft.SharePoint.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "osquerybeat.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE",
+                  "osqueryd.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "osqueryd.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "osquery-extension.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "prunsrv.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "CONHOST.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "rundll32.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "WinSAT.exe",
+                  "sdbinst.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "RuntimeBroker.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "Win32Bridge.Server"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "SearchIndexer.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "SearchFilterHost.exe",
+                  "SearchProtocolHost.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "services.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "elastic-agent.exe",
+                  "elevation_service.exe",
+                  "GoogleUpdate.exe",
+                  "MpDefenderCoreService.exe",
+                  "MSDTC.EXE",
+                  "msedgeupdate.dll",
+                  "msiexec.exe",
+                  "MsMpEng.exe",
+                  "NisSrv.exe",
+                  "SearchIndexer.exe",
+                  "SecurityHealthService.exe",
+                  "SgrmBroker.exe",
+                  "spoolsv.exe",
+                  "sppsvc.exe",
+                  "svchost.exe",
+                  "TrustedInstaller.exe",
+                  "uhssvc",
+                  "upfc.exe",
+                  "VGAuthService.exe",
+                  "vm3dservice.exe",
+                  "vmtoolsd.exe",
+                  "VSSVC.EXE",
+                  "WmiApSrv.exe",
+                  "WUDFHost.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "setup.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "setup.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "should": [
+            {
+              "terms": {
+                "process.parent.command_line": [
+                  "ruby  -S -- puppet agent --onetime",
+                  "C:\\Windows\\SYSTEM32\\cmd.exe /c \"\"C:\\Program Files (x86)\\Simspace\\UE\\tools\\ue-check.bat\"\"",
+                  "C:\\Windows\\system32\\cmd.exe /c \"\"C:/Program Files/Puppet Labs/Puppet/bin/puppet.bat\" agent --onetime \"",
+                  "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Program Files\\Puppet Labs\\Puppet\\bin\\puppet.bat\" agent --configprint runinterval \"",
+                  "\"C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin\\ruby.exe\" -rubygems \"C:\\Program Files\\Puppet Labs\\Puppet\\service\\daemon.rb\"",
+                  "\"C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin\\ruby.exe\" -e \"print(['libdir', 'archlibdir', 'sitearchlibdir', 'bindir'].find do |name|dir = RbConfig::CONFIG[name];next unless dir;file = File.join(dir, RbConfig::CONFIG['LIBRUBY_SO']);break file if File.exist? file;false end)\"",
+                  "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\cscript.exe %windir%\\system32\\slmgr.vbs /dlv | find \"License Status\"",
+                  "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\cscript.exe %windir%\\system32\\slmgr.vbs /dlv | find \"Windows rearm count\""
+                ]
+              }
+            },
+            {
+              "prefix": {
+                "process.parent.command_line": "cmd.exe /c \"\"C:\\Windows\\system32\\cscript.exe\" /nologo \"C:\\Windows\\Temp\\puppet-vbscript"
+              }
+            }
+          ],
+          "minimum_should_match": 1
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "prefix": {
+                "process.parent.name": "smss.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "WINLOGON.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "SppExtComObj.Exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "slui.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "svchost.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "AggregatorHost.exe",
+                  "AppHostNameRegistrationVerifier.exe",
+                  "AppIDCertstoreCheck.exe",
+                  "AppIDPolicyConverter.exe",
+                  "ApplicationFrameHost.exe",
+                  "audioadg.exe",
+                  "backgroundTaskHost.exe",
+                  "BackgroundTransferHost.exe",
+                  "CLEANMGR.DLL",
+                  "ClipRenew.exe",
+                  "CompatTelRunner.exe",
+                  "consent.exe",
+                  "Cortana.exe",
+                  "CTFMON.EXE",
+                  "DataExchangeHost.exe",
+                  "default-browser-agent.exe",
+                  "Defrag.EXE",
+                  "DeviceCensus.exe",
+                  "DirectXDatabaseUpdater.exe",
+                  "DiskSnapshot.exe",
+                  "dmclient.exe",
+                  "dstokenclean.exe",
+                  "DXGIAdapterCache.exe",
+                  "FileCoAuth.exe",
+                  "EXPLORER.EXE",
+                  "firefox.exe",
+                  "GameBar.exe",
+                  "GameBarFTServer.exe",
+                  "GoogleUpdate.exe",
+                  "HxTsr.exe",
+                  "LocationNotificationWindows.exe",
+                  "LockApp.exe",
+                  "lpremove.exe",
+                  "mobsync.exe",
+                  "MoUSOCoreWorker.exe",
+                  "MpCmdRun.exe",
+                  "msedgeupdate.dll",
+                  "OneDriveStandaloneUpdater.exe",
+                  "pcaui.exe",
+                  "PhoneExperienceHost.dll",
+                  "PickerHost.exe",
+                  "provtool",
+                  "rdpclip.exe",
+                  "RuntimeBroker.exe",
+                  "sdbinst.exe",
+                  "sc.exe",
+                  "sdiagnhost.exe",
+                  "SearchApp.exe",
+                  "SearchHost.exe",
+                  "SecHealthUI.exe",
+                  "SecureBootEncodeUEFI.exe",
+                  "SecurityHealthHost.exe",
+                  "ShellExperienceHost.exe",
+                  "sihost.exe",
+                  "slui.exe",
+                  "smartscreen.exe",
+                  "SpeechModelDownload.exe",
+                  "SpeechRuntime.exe",
+                  "SppExtComObj.exe",
+                  "srtasks.exe",
+                  "startmenuexperiencehost.exe",
+                  "SystemSettings.exe",
+                  "SystemSettingsBroker.exe",
+                  "taskhostw.exe",
+                  "TextInputHost.exe",
+                  "TiWorker.exe",
+                  "TSThemeS.exe",
+                  "UCPDMgr.exe",
+                  "unsecapp.dll",
+                  "UsoClient",
+                  "WaasMedicAgent.exe",
+                  "WerMgr",
+                  "wevtutil.exe",
+                  "Widgets.exe",
+                  "WidgetService.exe",
+                  "wmicookr.dll",
+                  "Wmiprvse.exe",
+                  "wsqmcons.exe",
+                  "wuaucltcore.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "Sysmon64.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "wevtutil.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "System"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "smss.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "taskhostw.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "NGenTask.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "TiWorker.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "makecab.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "userinit.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "EXPLORER.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "upfc.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "sihclient.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "vm3dservice.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "vm3dservice.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "vmtoolsd.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "ResolutionSet.exe",
+                  "Cmd.Exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "Widgets.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "msedgewebview2.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "wininit.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "lsass.exe",
+                  "services.exe",
+                  "fontdrvhost.exe"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "winlogon.exe"
+              }
+            },
+            {
+              "terms": {
+                "process.pe.original_file_name": [
+                  "ATBroker.exe",
+                  "logonui.exe",
+                  "dwm.exe",
+                  "fontdrvhost.exe",
+                  "WLRMNDR.EXE",
+                  "USERINIT.EXE"
+                ]
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "must": [
+            {
+              "match_phrase": {
+                "process.parent.name": "wuaucltcore.exe"
+              }
+            },
+            {
+              "bool": {
+                "should": [
+                  {
+                    "prefix": {
+                      "process.pe.original_file_name": "AM_Delta_Patch_"
+                    }
+                  },
+                  {
+                    "terms": {
+                      "process.pe.original_file_name": [
+                        "MpSigStub.exe",
+                        "UpdatePlatform.exe",
+                        "DismHost.exe",
+                        "mrtstub.exe",
+                        "extractr.exe",
+                        "unifiedinstaller"
+                      ]
+                    }
+                  }
+                ],
+                "minimum_should_match": 1
+              }
+            },
+            {
+              "match_phrase": {
+                "process.code_signature.trusted": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

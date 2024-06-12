@@ -1,0 +1,101 @@
+{
+    "bool": {
+        "must": [
+            {
+                "match_phrase": {
+                    "process.parent.name": "svchost.exe"
+                }
+            },            
+            {
+                "terms": {
+                    "process.pe.original_file_name": [
+                        "AggregatorHost.exe",
+                        "AppHostNameRegistrationVerifier.exe",
+                        "AppIDCertstoreCheck.exe",
+                        "AppIDPolicyConverter.exe",
+                        "ApplicationFrameHost.exe",
+                        "audioadg.exe",
+                        "backgroundTaskHost.exe",
+                        "BackgroundTransferHost.exe",
+                        "CLEANMGR.DLL",
+                        "ClipRenew.exe",
+                        "CompatTelRunner.exe",
+                        "consent.exe",
+                        "Cortana.exe",
+                        "CTFMON.EXE",
+                        "DataExchangeHost.exe",
+                        "default-browser-agent.exe",
+                        "Defrag.EXE",
+                        "DeviceCensus.exe",
+                        "DirectXDatabaseUpdater.exe",
+                        "DiskSnapshot.exe",
+                        "dmclient.exe",
+                        "dstokenclean.exe",
+                        "DXGIAdapterCache.exe",
+                        "FileCoAuth.exe",
+                        "EXPLORER.EXE",
+                        "firefox.exe",
+                        "GameBar.exe",
+                        "GameBarFTServer.exe",
+                        "GoogleUpdate.exe",
+                        "HxTsr.exe",
+                        "LocationNotificationWindows.exe",
+                        "LockApp.exe",
+                        "lpremove.exe",
+                        "mobsync.exe",
+                        "MoUSOCoreWorker.exe",
+                        "MpCmdRun.exe",
+                        "msedgeupdate.dll",
+                        "OneDriveStandaloneUpdater.exe",
+                        "pcaui.exe",
+                        "PhoneExperienceHost.dll",
+                        "PickerHost.exe",
+                        "provtool",
+                        "rdpclip.exe",
+                        "RuntimeBroker.exe",
+                        "sdbinst.exe",
+                        "sc.exe",
+                        "sdiagnhost.exe",
+                        "SearchApp.exe",
+                        "SearchHost.exe",
+                        "SecHealthUI.exe",
+                        "SecureBootEncodeUEFI.exe",
+                        "SecurityHealthHost.exe",
+                        "ShellExperienceHost.exe",
+                        "sihost.exe",
+                        "slui.exe",
+                        "smartscreen.exe",
+                        "SpeechModelDownload.exe",
+                        "SpeechRuntime.exe",
+                        "SppExtComObj.exe",
+                        "srtasks.exe",
+                        "startmenuexperiencehost.exe",
+                        "SystemSettings.exe",
+                        "SystemSettingsBroker.exe",
+                        "taskhostw.exe",
+                        "TextInputHost.exe",
+                        "TiWorker.exe",
+                        "TSThemeS.exe",
+                        "UCPDMgr.exe",
+                        "unsecapp.dll",
+                        "UsoClient",
+                        "WaasMedicAgent.exe",
+                        "WerMgr",
+                        "wevtutil.exe",
+                        "Widgets.exe",
+                        "WidgetService.exe",
+                        "wmicookr.dll",
+                        "Wmiprvse.exe",
+                        "wsqmcons.exe",
+                        "wuaucltcore.exe"
+                    ]
+                }
+            },
+            {
+                "match_phrase": {
+                    "process.code_signature.trusted": true
+                }
+            }
+        ]
+    }
+}

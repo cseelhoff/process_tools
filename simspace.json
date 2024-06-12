@@ -1,0 +1,26 @@
+{
+  "bool": {
+    "should": [
+      {
+        "terms": {
+          "process.parent.command_line": [
+            "ruby  -S -- puppet agent --onetime",
+            "C:\\Windows\\SYSTEM32\\cmd.exe /c \"\"C:\\Program Files (x86)\\Simspace\\UE\\tools\\ue-check.bat\"\"",
+            "C:\\Windows\\system32\\cmd.exe /c \"\"C:/Program Files/Puppet Labs/Puppet/bin/puppet.bat\" agent --onetime \"",
+            "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Program Files\\Puppet Labs\\Puppet\\bin\\puppet.bat\" agent --configprint runinterval \"",
+            "\"C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin\\ruby.exe\" -rubygems \"C:\\Program Files\\Puppet Labs\\Puppet\\service\\daemon.rb\"",
+            "\"C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin\\ruby.exe\" -e \"print(['libdir', 'archlibdir', 'sitearchlibdir', 'bindir'].find do |name|dir = RbConfig::CONFIG[name];next unless dir;file = File.join(dir, RbConfig::CONFIG['LIBRUBY_SO']);break file if File.exist? file;false end)\"",
+            "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\cscript.exe %windir%\\system32\\slmgr.vbs /dlv | find \"License Status\"",
+            "C:\\Windows\\system32\\cmd.exe /c C:\\Windows\\system32\\cscript.exe %windir%\\system32\\slmgr.vbs /dlv | find \"Windows rearm count\""
+          ]
+        }
+      },
+      {
+        "prefix": {
+          "process.parent.command_line": "cmd.exe /c \"\"C:\\Windows\\system32\\cscript.exe\" /nologo \"C:\\Windows\\Temp\\puppet-vbscript"
+        }
+      }
+    ],
+    "minimum_should_match": 1
+  }
+}
